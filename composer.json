@@ -1,0 +1,29 @@
+{
+	"name": "donatj/webarchive",
+	"description": "Library for writing Apple Safari's '.Webarchive' format (binary plist).",
+	"keywords": ["webarchive"],
+	"type": "library",
+	"homepage": "https://github.com/donatj/Webarchive-PHP",
+	"license": "MIT",
+	"require": {
+		"rodneyrehm/plist" : "dev-master",
+		"php"              : ">=5.3"
+	},
+	"authors": [
+		{
+			"name"      : "Jesse G. Donat",
+			"email"     : "donatj@gmail.com",
+			"homepage"  : "http://donatstudios.com",
+			"role"      : "Developer"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/donatj/Webarchive-PHP/issues",
+		"source": "https://github.com/donatj/Webarchive-PHP"
+	},
+	"autoload": {
+		"psr-0": {
+			"donatj":"lib\/"
+		}
+	}
+}
