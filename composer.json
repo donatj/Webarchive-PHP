@@ -6,7 +6,7 @@
 	"homepage": "https://github.com/donatj/Webarchive-PHP",
 	"license": "MIT",
 	"require": {
-		"rodneyrehm/plist" : "dev-master",
+		"rodneyrehm/plist" : "*",
 		"php"              : ">=5.3"
 	},
 	"authors": [
