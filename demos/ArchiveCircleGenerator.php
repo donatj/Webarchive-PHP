@@ -1,10 +1,4 @@
 <?php
-/**
- * Examples for how to use CFPropertyList
- * Create the PropertyList sample.xml.plist by using the CFPropertyList API.
- * @package plist
- * @subpackage plist.examples
- */
 
 include('lib/donatj/Webarchive.php');
 
