@@ -38,12 +38,27 @@ class Webarchive {
 
 	}
 
-	public function addMainResource( $content, $url = false, $mime = 'text/html', $charset = 'UTF-8', $headers = false ) {
+	/**
+	 * @param string       $content
+	 * @param string|null  $url
+	 * @param string       $mime
+	 * @param string|null  $charset
+	 * @param string|null  $headers
+	 */
+	public function addMainResource( $content, $url = null, $mime = 'text/html', $charset = 'UTF-8', $headers = null ) {
 
 		$this->addDocument($this->mainDoc, $content, $url, $mime, $charset, $headers);
 
 	}
 
+	/**
+	 * @param CFDictionary $dict
+	 * @param string       $content
+	 * @param string|null  $url
+	 * @param string       $mime
+	 * @param string|null  $charset
+	 * @param string|null  $headers
+	 */
 	private function addDocument( CFDictionary $dict, $content, $url, $mime, $charset, $headers ) {
 
 		$dict->add('WebResourceData', new CFData($content));
@@ -63,17 +78,24 @@ class Webarchive {
 
 	}
 
-	public function addSubResource( $content, $url, $mime = 'text/html', $charset = false, $headers = false ) {
+	/**
+	 * @param string       $content
+	 * @param string|null  $url
+	 * @param string       $mime
+	 * @param string|null  $charset
+	 * @param string|null  $headers
+	 */
+	public function addSubResource( $content, $url, $mime = 'text/html', $charset = null, $headers = null ) {
 		$this->subDocs->add($dict = new CFDictionary());
 
 		$this->addDocument($dict, $content, $url, $mime, $charset, $headers);
 	}
 
-	function save( $filename ) {
+	public function save( $filename ) {
 		$this->plist->saveBinary($filename);
 	}
 
-	function output() {
+	public function output() {
 		$this->plist->saveBinary('php://output');
 	}
 
