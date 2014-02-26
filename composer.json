@@ -5,9 +5,8 @@
 	"type": "library",
 	"homepage": "https://github.com/donatj/Webarchive-PHP",
 	"license": "MIT",
-	"minimum-stability": "dev",
 	"require": {
-		"rodneyrehm/plist" : "dev-master",
+		"rodneyrehm/plist" : "2.*",
 		"php"              : ">=5.3"
 	},
 	"authors": [
