@@ -39,16 +39,14 @@ class Webarchive {
 	}
 
 	/**
-	 * @param string       $content
-	 * @param string|null  $url
-	 * @param string       $mime
-	 * @param string|null  $charset
-	 * @param string|null  $headers
+	 * @param string      $content
+	 * @param string|null $url
+	 * @param string      $mime
+	 * @param string|null $charset
+	 * @param string|null $headers
 	 */
 	public function addMainResource( $content, $url = null, $mime = 'text/html', $charset = 'UTF-8', $headers = null ) {
-
 		$this->addDocument($this->mainDoc, $content, $url, $mime, $charset, $headers);
-
 	}
 
 	/**
@@ -79,11 +77,11 @@ class Webarchive {
 	}
 
 	/**
-	 * @param string       $content
-	 * @param string|null  $url
-	 * @param string       $mime
-	 * @param string|null  $charset
-	 * @param string|null  $headers
+	 * @param string      $content
+	 * @param string|null $url
+	 * @param string      $mime
+	 * @param string|null $charset
+	 * @param string|null $headers
 	 */
 	public function addSubResource( $content, $url, $mime = 'text/html', $charset = null, $headers = null ) {
 		$this->subDocs->add($dict = new CFDictionary());
