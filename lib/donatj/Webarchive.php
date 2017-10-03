@@ -27,6 +27,9 @@ class Webarchive {
 	 */
 	private $subDocs;
 
+	/**
+	 * Webarchive constructor
+	 */
 	function __construct() {
 		$this->plist = new CFPropertyList();
 		$this->dict  = new CFDictionary();
@@ -35,7 +38,6 @@ class Webarchive {
 		$this->dict->add('WebMainResource', $this->mainDoc = new CFDictionary());
 
 		$this->dict->add('WebSubresources', $this->subDocs = new CFArray());
-
 	}
 
 	/**
@@ -58,7 +60,6 @@ class Webarchive {
 	 * @param string|null  $headers
 	 */
 	private function addDocument( CFDictionary $dict, $content, $url, $mime, $charset, $headers ) {
-
 		$dict->add('WebResourceData', new CFData($content));
 		$dict->add('WebResourceMIMEType', new CFString($mime));
 
@@ -73,7 +74,6 @@ class Webarchive {
 		if( $headers ) {
 			$dict->add('WebResourceResponse', new CFData($headers));
 		}
-
 	}
 
 	/**
@@ -89,13 +89,20 @@ class Webarchive {
 		$this->addDocument($dict, $content, $url, $mime, $charset, $headers);
 	}
 
+	/**
+	 * Save to a file
+	 *
+	 * @param $filename string
+	 */
 	public function save( $filename ) {
 		$this->plist->saveBinary($filename);
 	}
 
+	/**
+	 * Output to `php://output`
+	 */
 	public function output() {
 		$this->plist->saveBinary('php://output');
 	}
-
 
 }
