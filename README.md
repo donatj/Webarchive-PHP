@@ -44,6 +44,9 @@ Webarchive constructor
 function addMainResource($content [, $url = null [, $mime = 'text/html' [, $charset = 'UTF-8' [, $headers = null]]]])
 ```
 
+Adds the Primary "MainResource" - which is the entry point into the web archive,  
+usually an HTML document.
+
 ##### Parameters:
 
 - ***string*** `$content`
@@ -59,6 +62,9 @@ function addMainResource($content [, $url = null [, $mime = 'text/html' [, $char
 ```php
 function addSubResource($content, $url [, $mime = 'text/html' [, $charset = null [, $headers = null]]])
 ```
+
+Adds a secondary resource. Images, JavaScript, XML, JSON, etc.  
+Resources to accompany the primary document.
 
 ##### Parameters:
 

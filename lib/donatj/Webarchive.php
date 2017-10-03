@@ -41,6 +41,9 @@ class Webarchive {
 	}
 
 	/**
+	 * Adds the Primary "MainResource" - which is the entry point into the web archive,
+	 * usually an HTML document.
+	 *
 	 * @param string      $content
 	 * @param string|null $url
 	 * @param string      $mime
@@ -77,6 +80,10 @@ class Webarchive {
 	}
 
 	/**
+	 * Adds a secondary resource. Images, JavaScript, XML, JSON, etc.
+	 *
+	 * Resources to accompany the primary document.
+	 *
 	 * @param string      $content
 	 * @param string|null $url
 	 * @param string      $mime
