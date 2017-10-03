@@ -1,0 +1,22 @@
+<mddoc>
+	<docpage target="README.md" autoloader="psr0" autoloader-root="src">
+		<section title="Flags">
+			<badge-poser type="version" />
+			<badge-poser type="downloads" />
+			<badge-poser type="license" />
+			<text>A library for writing Apple Safari's 'webarchive' binary plist files</text>
+			<section title="Requirements">
+				<composer-requires/>
+			</section>
+			<section title="Installing">
+				<composer-install/>
+			</section>
+			<section title="Example">
+				<text>To Come!</text>
+			</section>
+			<section title="Documentation">
+				<file name="lib/donatj/Webarchive.php" />
+			</section>
+		</section>
+	</docpage>
+</mddoc>
