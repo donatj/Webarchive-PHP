@@ -1,4 +1,4 @@
-# Flags
+# Webarchive
 
 [![Latest Stable Version](https://poser.pugx.org/donatj/webarchive/version)](https://packagist.org/packages/donatj/webarchive)
 [![Total Downloads](https://poser.pugx.org/donatj/webarchive/downloads)](https://packagist.org/packages/donatj/webarchive)
