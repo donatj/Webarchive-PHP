@@ -11,8 +11,8 @@
 			<section title="Installing">
 				<composer-install/>
 			</section>
-			<section title="Example">
-				<text>To Come!</text>
+			<section title="Examples">
+				<source name="example/basic.php" lang="php"/>
 			</section>
 			<section title="Documentation">
 				<file name="lib/donatj/Webarchive.php" />
