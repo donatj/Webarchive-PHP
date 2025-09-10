@@ -3,3 +3,4 @@ composer.lock
 *.webarchive
 *.plist
 .idea/
+*.cache

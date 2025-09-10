@@ -1,11 +1,12 @@
-# Webarchive
+# Webarchive-PHP
 
 [![Latest Stable Version](https://poser.pugx.org/donatj/webarchive/version)](https://packagist.org/packages/donatj/webarchive)
 [![Total Downloads](https://poser.pugx.org/donatj/webarchive/downloads)](https://packagist.org/packages/donatj/webarchive)
 [![License](https://poser.pugx.org/donatj/webarchive/license)](https://packagist.org/packages/donatj/webarchive)
+[![ci.yml](https://github.com/donatj/Webarchive-PHP/actions/workflows/ci.yml/badge.svg)](https://github.com/donatj/Webarchive-PHP/actions/workflows/ci.yml)
 
 
-A library for writing Apple Safari's 'webarchive' binary plist files
+A library for writing Apple Safari 'webarchive' files
 
 ## Requirements
 
@@ -20,13 +21,34 @@ Install the latest version with:
 composer require 'donatj/webarchive'
 ```
 
-## Example
+## Examples
 
-To Come!
+```php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$archive = new \donatj\Webarchive();
+
+// Main HTML document (entry point)
+$html = "<html><head><title>Example</title><link rel=\"stylesheet\" href=\"style.css\"></head><body><h1>Hello Webarchive</h1></body></html>";
+$archive->addMainResource($html, 'https://example.test/index.html', 'text/html', 'UTF-8');
+
+// A simple CSS subresource referenced by the HTML page
+$css = "body{font-family:sans-serif;background:#fafafa;color:#333;} h1{color:#0066cc;}";
+$archive->addSubResource($css, 'https://example.test/style.css', 'text/css');
+
+// Save the webarchive (binary plist) to a file
+$outFile = __DIR__ . '/basic.webarchive';
+$archive->save($outFile);
+
+echo "Wrote webarchive: " . $outFile . "\n";
+
+```
 
 ## Documentation
 
-### Class: \donatj\Webarchive
+### Class: donatj\Webarchive
 
 #### Method: Webarchive->__construct
 
@@ -64,6 +86,7 @@ function addSubResource($content, $url [, $mime = 'text/html' [, $charset = null
 ```
 
 Adds a secondary resource. Images, JavaScript, XML, JSON, etc.  
+  
 Resources to accompany the primary document.
 
 ##### Parameters:
