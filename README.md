@@ -5,7 +5,7 @@
 [![License](https://poser.pugx.org/donatj/webarchive/license)](https://packagist.org/packages/donatj/webarchive)
 
 
-A library for writing Apple Safari's 'webarchive' binary plist files
+A library for writing Apple Safari 'webarchive' files
 
 ## Requirements
 

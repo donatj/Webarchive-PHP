@@ -4,7 +4,7 @@
 			<badge-poser type="version" />
 			<badge-poser type="downloads" />
 			<badge-poser type="license" />
-			<text>A library for writing Apple Safari's 'webarchive' binary plist files</text>
+			<text>A library for writing Apple Safari 'webarchive' files</text>
 			<section title="Requirements">
 				<composer-requires/>
 			</section>
