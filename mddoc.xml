@@ -1,6 +1,6 @@
 <mddoc>
 	<docpage target="README.md" autoloader="psr0" autoloader-root="src">
-		<section title="Flags">
+		<section title="Webarchive-PHP">
 			<badge-poser type="version" />
 			<badge-poser type="downloads" />
 			<badge-poser type="license" />
