@@ -109,7 +109,7 @@ Save to a file
 
 ##### Parameters:
 
-- ***mixed*** `$filename` - string
+- ***string*** `$filename`
 
 ---
 
