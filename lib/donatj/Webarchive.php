@@ -99,7 +99,7 @@ class Webarchive {
 	/**
 	 * Save to a file
 	 *
-	 * @param $filename string
+	 * @param string $filename
 	 */
 	public function save( $filename ) {
 		$this->plist->saveBinary($filename);
